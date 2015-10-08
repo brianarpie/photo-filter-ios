@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aaJ-VC-keq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Filter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoFilter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="derekincar.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VQS-fV-hJz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VQS-fV-hJz" secondAttribute="trailing" id="AOG-RR-jgy"/>
+                            <constraint firstItem="VQS-fV-hJz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TeK-0L-wga"/>
+                            <constraint firstAttribute="bottom" secondItem="VQS-fV-hJz" secondAttribute="bottom" id="YnL-YC-LbA"/>
+                            <constraint firstItem="VQS-fV-hJz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uTv-ME-Bp8"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="lZr-8G-TM3"/>
+                        <barButtonItem title="Apply Filter" id="nGg-41-ud9">
+                            <connections>
+                                <action selector="applyFilter:" destination="BYZ-38-t0r" id="j2k-p2-Jsd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="6jW-mp-gSq"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Filter" id="Jit-SC-ZuH"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="VQS-fV-hJz" id="ONV-9y-rqh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C2U-3f-7DQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="aaJ-VC-keq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6k5-Nd-XUl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mTm-lt-350">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qhS-vE-XSB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zgY-K8-HvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="1048"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="derekincar.jpg" width="1024" height="768"/>
+    </resources>
+</document>
